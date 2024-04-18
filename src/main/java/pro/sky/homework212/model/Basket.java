@@ -9,7 +9,7 @@ import java.util.List;
 @SessionScope
 public class Basket {
 
-    public List<Integer> sessionBasket;
+    private final List<Integer> sessionBasket;
 
     public Basket(List<Integer> sessionBasket) {
         this.sessionBasket = sessionBasket;
