@@ -3,6 +3,7 @@ package pro.sky.homework212.model;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -16,7 +17,7 @@ public class Basket {
     }
 
     public List<Integer> getSessionBasket() {
-        return sessionBasket;
+        return Collections.unmodifiableList(sessionBasket);
     }
 
     public void setSessionBasket(List<Integer> sessionBasket) {
